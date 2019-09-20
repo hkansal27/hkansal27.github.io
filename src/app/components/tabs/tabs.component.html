@@ -1,0 +1,13 @@
+<div class="tabs">
+    <div class="tab" (click)="updateSelectedTab('U')" [ngClass]="{ selected: selectedTab === 'U' }" class="box">
+        <span>{{'HOME.UPCOMING' | translate}} {{'HOME.CAMPAIGNS'|translate}}</span>
+    </div>
+
+    <div class="tab" (click)="updateSelectedTab('L')" [ngClass]="{ selected: selectedTab === 'L' }" class="box">
+        <span>{{'HOME.LIVE' | translate}} {{'HOME.CAMPAIGNS'|translate}}</span>
+    </div>
+
+    <div class="tab" (click)="updateSelectedTab('P')" [ngClass]="{ selected: selectedTab === 'P' }" class="box">
+        <span>{{'HOME.PAST' | translate}} {{'HOME.CAMPAIGNS'|translate}}</span>
+    </div>
+</div>

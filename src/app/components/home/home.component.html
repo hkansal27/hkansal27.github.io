@@ -1,0 +1,71 @@
+<div class="home">
+    <section class="tabs">
+        <div class="heading" style="text-align: center;">
+            {{'HOME.MANAGE' | translate}} <strong>{{'HOME.CAMPAIGNS' | translate}}</strong></div>
+        <div class="tabList">
+            <app-tabs (tabClickHandler)="updateSelectedTab($event)"></app-tabs>
+        </div>
+    </section>
+
+    <section class="dataTable">
+        <div *ngIf="selectedTab && events" class="tabData">
+            <table>
+                <thead>
+                    <tr>
+                        <td>{{'HOME.DATE' | translate}}</td>
+                        <td>{{'HOME.CAMPAIGN' | translate}}</td>
+                        <td>{{'HOME.VIEW' | translate}}</td>
+                        <td>{{'HOME.ACTIONS' | translate}}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of events[selectedTab]; let i = index">
+                        <td>
+                            <div>{{ data.date }}</div>
+                            <div *ngIf="selectedTab === 'P' || selectedTab === 'U'">
+                                {{ getDiferenceInDays(data.date) }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="campaignInfo">
+                                <div class="logo">
+                                    <img src="../../../assets/imgs/whatsapp.png" alt="campaign logo" />
+                                </div>
+                                <div class="data">
+                                    <div class="highLight">{{ data.campaign }}</div>
+                                    <div>{{ data.countryCode }}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="pricingImg">
+                            <img src="../../../assets/imgs/dollarimg.PNG" alt="View Pricing" />
+                        </td>
+                        <td id="actionCol">
+                            <div class="actionLogos">
+                                <div>
+                                    <span><i class="far fa-file-alt"></i></span>
+                                    <div class="actionText">CSV</div>
+                                </div>
+                                <div>
+                                    <span><i class="fas fa-signal"></i></span>
+                                    <div class="actionText">REPORT</div>
+                                </div>
+                                <div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [matDatepicker]="picker" (dateChange)="addEvent(i, $event)"
+                                            placeholder="Choose a date" />
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                    <span><i class="far fa-calendar-alt highLight" (click)="picker.open()"
+                                            hidden></i></span>
+
+                                    <div class="actionText">SCHEDULE AGAIN</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
