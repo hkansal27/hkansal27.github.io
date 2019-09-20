@@ -1,0 +1,43 @@
+{
+    "P": [
+        {
+            "date": "2017-08-01",
+            "campaign": "Test Whatsapp",
+            "countryCode": "US"
+        },
+        {
+            "date": "2016-08-17",
+            "campaign": "Super Jewels Quest",
+            "countryCode": "CA FR"
+        },
+        {
+            "date": "2016-08-17",
+            "campaign": "Mole Slayer",
+            "countryCode": "FR"
+        }
+    ],
+    "U": [
+        {
+            "date": "2019-10-08",
+            "campaign": "Upcoming 1",
+            "countryCode": "US"
+        },
+        {
+            "date": "2019-10-17",
+            "campaign": "Upcoming 2",
+            "countryCode": "JP"
+        }
+    ],
+    "L": [
+        {
+            "date": "2019-09-20",
+            "campaign": "Live 1",
+            "countryCode": "US"
+        },
+        {
+            "date": "2019-09-20",
+            "campaign": "Live 2",
+            "countryCode": "JP"
+        }
+    ]
+}
