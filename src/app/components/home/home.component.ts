@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  private updateSelectedTab(tabName) {
+  updateSelectedTab(tabName) {
     this.selectedTab = tabName;
   }
 

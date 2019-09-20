@@ -9,7 +9,7 @@ export class TabsComponent implements OnInit {
 
   @Output() public tabClickHandler = new EventEmitter<string>();
 
-  private selectedTab = 'U';
+  selectedTab = 'U';
 
   constructor() { }
 
